@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import blackLogo from '../../public/Black logo - no background.svg';
 import whiteLogo from '../../public/White logo - no background.svg';
+
 import { ModeToggle } from './ModeToggle';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
