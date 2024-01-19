@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
   // Get Sitemap from Sanity CMS
-  // const sitemap = await fetch('https://acme.com/sitemap.xml');
+  // const sitemap = await fetch('https://birdigi.vercel.app/sitemap.xml');
 
   return {
     rules: {
@@ -10,7 +10,8 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/contact',
     },
-    sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,
+    sitemap: `https://birdigi.vercel.app/}/sitemap.xml`,
+    // sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`,
   };
 }
 

@@ -47,35 +47,3 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [...additionalRoutes, ...postUrls];
 }
-
-// import { client } from './lib/sanity';
-// // Get All Posts from Sanity CMS
-// async function getData() {
-//   const query = `
-//     *[_type == 'post'] | order(_createdAt desc) {
-//       "currentSlug": slug.current,
-//     }`;
-
-//   const data = await client.fetch(query);
-
-//   return data;
-// }
-
-// export default async function sitemap() {
-//   const posts = await getData();
-//   const postsUrls =
-//     posts?.map((post: any) => {
-//       return {
-//         url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${post.currentSlug}`,
-//         lastModified: new Date(),
-//       };
-//     }) ?? [];
-
-//   return [
-//     {
-//       url: process.env.NEXT_PUBLIC_BASE_URL,
-//       lastModified: new Date(),
-//     },
-//     ...postsUrls,
-//   ];
-// }

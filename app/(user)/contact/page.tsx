@@ -34,7 +34,7 @@ export default function Contact() {
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: 'Carnival Blog',
+      to_name: 'Birdigi',
       message: message,
     };
 
