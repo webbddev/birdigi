@@ -1,0 +1,123 @@
+// {
+//   /* {data.author && data.author.authorImage && (
+//         <div className='flex gap-3 max-w-5xl items-center justify-center mx-auto'>
+//           <div className='flex items-center justify-center space-x-3'>
+//             <Image
+//               src={urlFor(data.author.authorImage).url()}
+//               width={80}
+//               height={80}
+//               className='object-cover w-12 h-12 rounded-full'
+//               alt='Authors image'
+//             />
+//           </div>
+//         </div>
+//       )} */
+// }
+
+// enhancing-customer-interaction-with-ai-powered-chatbots
+
+// async function getData(slug: string) {
+//   const query = `
+//     *[_type == "post" && slug.current == 'enhancing-customer-interaction-with-ai-powered-chatbots' ] {
+//       "currentSlug": slug.current,
+//       title,
+//       content,
+//       titleImage,
+//       publishedAt,
+//       "author": *[_type == "author"] {
+//   name,
+//   bio,
+//   "authorImage": authorImage.asset->url
+// }
+//     }[0]`;
+
+//   const data = await client.fetch(query);
+
+//   return data;
+// }
+
+Welcome to Carnivalis Digitum
+            <br /> My name is Alya. I bring a wealth of experience from my
+            dynamic career in journalism, where I've served as a seasoned TV
+            host, conducting engaging live interviews and crafting compelling
+            articles. With a background deeply rooted in TV production, I've
+            honed my skills in delivering content that captivates audiences.
+            <br />
+            Driven by a passion for staying at the forefront of digital trends,
+            I'm currently embarking on a new journey in the realms of digital
+            marketing and SEO. My expertise now extends to the ever-evolving
+            landscape of online visibility and strategic marketing.
+            <br />
+            Here at [Your Blog Name], I share insights and knowledge garnered
+            from my experiences, aiming to demystify the intricacies of SEO and
+            other digital marketing facets. Join me on this exciting exploration
+            of the digital realm, where I blend my journalistic prowess with a
+            keen understanding of the online landscape.
+            <br />
+            I warmly welcome fellow SEO and digital marketing specialists to
+            contribute their expertise to enrich the discussions on [Your Blog
+            Name]. Let's build a community where insights flow freely and
+            collectively elevate our understanding of digital strategies.
+            <br />
+            Alya Gordienko
+
+
+// async function getData(slug: string) {
+//   const query = `
+//     *[_type == "post" && slug.current == '${slug}'] {
+//   "currentSlug": slug.current,
+//   title,
+//   content,
+//   metaDescription,
+//   titleImage,
+//   publishedAt,
+//   "author": *[_type == 'author' && _id == ^.author._ref][0] {
+//     name,
+//     "authorImage": authorImage.asset->url,
+//     'bioText': bio[0].children[0].text
+//     }
+//   }[0]
+//   `;
+
+//   const data = await client.fetch(query);
+//   console.log('Fetched Data Recieved Yo!:', data);
+
+//   return data;
+// }
+
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { slug: string };
+// }) {
+//   try {
+//     const data: fullBlog = await getData(params.slug);
+
+//     if (!data) {
+//       console.error('Data not available');
+//       return {
+//         title: 'Not Found',
+//         description: 'The page you are looking for does not exist',
+//       };
+//     }
+
+//     return {
+//       title: data.title,
+//       description: data.metaDescription || 'No description available',
+//       openGraph: {},
+//       alternates: {
+//         canonical: `/post/${data.currentSlug}`,
+//         languages: {
+//           'en-US': `/en-US/post/${data.currentSlug}`,
+//         },
+//       },
+//     };
+//   } catch (error) {
+//     console.error(error);
+//     return {
+//       title: 'Not found',
+//     };
+//   }
+// }
+
+{/* <h1 className='text-5xl font-bold text-center lg:text-6xl md:text-center p-3 bg-gradient-to-r from-blue-500 to-teal-500 text-transparent bg-clip-text '> */}
