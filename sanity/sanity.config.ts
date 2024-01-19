@@ -7,7 +7,7 @@ import {pexelsImageAsset} from 'sanity-plugin-asset-source-pexels'
 
 export default defineConfig({
   name: 'default',
-  title: 'Carnival Compania Blog',
+  title: 'Birdigi Blog',
 
   projectId: '0buhqdzi',
   dataset: 'production',
