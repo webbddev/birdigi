@@ -14,10 +14,10 @@ const metadata: Metadata = {
 };
 
 // const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-// const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 // const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
 const serviceId = 'service_01cdr11';
-const templateId = 'template_h6hfhke';
+const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const publicKey = 'E0ZusFaL6tRW0y_Fo';
 
 if (!serviceId || !templateId || !publicKey) {
