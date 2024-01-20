@@ -13,9 +13,12 @@ const metadata: Metadata = {
   title: 'Contact',
 };
 
-const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+// const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+// const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+// const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+const serviceId = 'service_01cdr11';
+const templateId = 'template_h6hfhke';
+const publicKey = 'E0ZusFaL6tRW0y_Fo';
 
 if (!serviceId || !templateId || !publicKey) {
   console.error('One or more EmailJS variables are not defined.');
