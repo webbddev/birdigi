@@ -181,7 +181,7 @@ export default async function BlogArticle({
         />
       </div>
 
-      <div className='mt-2 md:mt-10 mb-10 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary max-w-none mx-auto'>
+      <div className='mt-2 md:mt-10 mb-10 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary max-w-none md:w-4/5 mx-auto'>
         <PortableText value={data.content} components={PortableTextComponent} />
       </div>
     </div>
