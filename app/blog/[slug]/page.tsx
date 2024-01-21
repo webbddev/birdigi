@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 // fetch data for a specific blog post based on its slug
-export const revalidate = 0; // revalidate at most 30 seconds
+export const revalidate = 120; // revalidate at most 120 seconds
 
 async function fetchData(slug: string) {
   const query = `
@@ -106,8 +106,7 @@ export default async function BlogArticle({
 
   if (!data) {
     // Redirect to 404 page if data is not found
-    notFound();
-    return null;
+    return notFound();
   }
 
   // Configuration for rendering images inside the article content
@@ -145,18 +144,22 @@ export default async function BlogArticle({
       </span>
 
       <div className='flex items-center md:flex-col justify-center max-w-sm mx-auto mt-2 text-center rounded-xl'>
-        <link
-          rel='preload'
-          as='image'
-          href={urlFor(data.author.authorImage).url()}
-        />
-        <Image
-          src={urlFor(data.author.authorImage).url()}
-          width={80}
-          height={80}
-          className='object-cover w-12 h-12 md:w-14 md:h-14 rounded-full border dark:border-amber-50 mr-2'
-          alt='Authors Profile Image'
-        />
+        {data.author.authorImage && (
+          <>
+            <link
+              rel='preload'
+              as='image'
+              href={urlFor(data.author.authorImage).url()}
+            />
+            <Image
+              src={urlFor(data.author.authorImage).url()}
+              width={80}
+              height={80}
+              className='object-cover w-12 h-12 md:w-14 md:h-14 rounded-full border dark:border-amber-50 mr-2'
+              alt='Authors Profile Image'
+            />
+          </>
+        )}
         <div className='flex flex-col items-center p-2'>
           <p className='text-sm md:text-base text-primary mt-2 tracking-wide'>
             By {data.author.name}

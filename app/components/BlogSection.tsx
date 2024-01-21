@@ -7,7 +7,7 @@ import { simplePostCard } from '../lib/interface';
 import { Button } from '@/components/ui/button';
 
 // fetch data from Sanity.io for the blog section
-export const revalidate = 0; // revalidate at most 30 seconds
+export const revalidate = 120; // revalidate at most 120 seconds
 
 async function getData() {
   const query = `
