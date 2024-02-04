@@ -38,3 +38,11 @@ export interface NotificationProps {
   message: string;
   onClose: () => void;
 }
+
+export interface Result {
+  title: string;
+  smallDescription: string;
+  currentSlug: string;
+  titleImage: any; // replace 'any' with the actual type
+  categories: { _id: string; title: string }[];
+}

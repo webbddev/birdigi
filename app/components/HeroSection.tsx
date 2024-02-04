@@ -1,3 +1,5 @@
+import Search from './Search';
+
 const HeroSection = () => {
   return (
     // Hero Container
@@ -14,6 +16,9 @@ const HeroSection = () => {
         <div className='block mx-auto text-center text-2xl lg:text-4xl tracking-wider text-gray-700'>
           ...
         </div>
+        {/* <div className='block mx-auto text-center'>
+          <Search />
+        </div> */}
       </div>
     </div>
   );

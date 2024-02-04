@@ -5,7 +5,8 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 // fetch data for a specific blog post based on its slug
-export const revalidate = 120; // revalidate at most 120 seconds
+// export const revalidate = 120; // revalidate at most 120 seconds
+export const dynamic = 'force-dynamic';
 
 async function fetchData(slug: string) {
   const query = `
