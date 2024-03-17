@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import aboutImg from '../../../images/imageAboutAlya.png';
+import contactImg from '../../../images/contact_me-crop-removebg-hd.webp';
+// import aboutImg from '../../../images/imageAboutAlya.png';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
@@ -17,7 +18,7 @@ export default function About() {
         {/* image */}
         <div className='flex-1 md:max-h-full lg:max-h-max overflow-hidden'>
           <Image
-            src={aboutImg}
+            src={contactImg}
             className='object-cover md:w-full'
             alt='portrait of an author'
           />
