@@ -39,7 +39,7 @@ export default function RootLayout({
           <main className='max-w-6xl mx-auto px-4 min-h-screen'>
             {children}
           </main>
-          {/* <Footer /> */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

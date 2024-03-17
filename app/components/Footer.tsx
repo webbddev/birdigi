@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className='w-full bg-primary text-center max-w-6xl mx-auto px-4 py-5 mt-5'>
       <p className='text-white'>
-        &copy; {currentYear} CarnivalCampania. All rights reserved.
+        &copy; {currentYear} Birdigi. All rights reserved.
       </p>
     </div>
   );
