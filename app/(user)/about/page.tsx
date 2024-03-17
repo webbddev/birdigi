@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import contactImg from '../../../images/contact_me-crop-removebg-hd.webp';
+import contactImg from '../../../images/contact-me-original.jpg';
 // import aboutImg from '../../../images/imageAboutAlya.png';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
